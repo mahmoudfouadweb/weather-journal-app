@@ -4,5 +4,23 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "node": "^16.6.0"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "weather-journal-app",
+  "description": "## Overview This project requires you to create an asynchronous web app that uses Web API and user data to dynamically update the UI.",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahmoudfouadweb/weather-journal-app-modified.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mahmoudfouadweb/weather-journal-app-modified/issues"
+  },
+  "homepage": "https://github.com/mahmoudfouadweb/weather-journal-app-modified#readme"
 }
