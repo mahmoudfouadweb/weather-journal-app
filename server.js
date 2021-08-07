@@ -20,6 +20,11 @@ app.use(express.static('website'));
 
 
 // Setup Server
-app.listen(port, () => {
+const server = app.listen(port, () => {
     console.log(`server port: ${port}`);
 });
+
+app.get('/', data)
+function data(req, res) =>{
+    res.send(projectData);
+}
