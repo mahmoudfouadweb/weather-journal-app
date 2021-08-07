@@ -11,5 +11,5 @@ const urlZip = 'api.openweathermap.org/data/2.5/weather?zip={zip code},{country 
 const genButton = document.getElementById('generate');
 
 genButton.addEventListener('click', () => {
-    conist zipId = document.getElementById('zip').value;
+    const zipId = document.getElementById('zip').value;
 })
