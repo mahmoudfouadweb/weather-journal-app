@@ -19,9 +19,14 @@ const zippy = async () => {
         // convert data to json
         const data = await res.json();
         const temp = data.main.temp;
-        console.log(temp);
+        console.log(data);
 
 }
 // Event listener to add function to existing HTML DOM element
 genButton.addEventListener('click', zippy);
+
+/* Function to POST data */
+
+
+/* Function to GET Project Data */
 

@@ -28,13 +28,16 @@ app.use(cors());
 app.use(express.static('website'));
 // Post Route
 app.post('/save', (req, res) => {
-    projectData = req.body;
-    res.send() 
-})
+     req.body = projectData;
+     req.body.temp = projectData.temp;
+     req.body.date = projectData.date;
+     req.body.name = projectData.name;
+     res.end()
+});
 // Callback function to complete GET '/all'
 app.get('/weather', (req, res) => {
     res.send(projectData)
-})
+});
 console.log(projectData);
 
 
