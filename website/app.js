@@ -26,11 +26,11 @@ const zippy = async () => {
 genButton.addEventListener('click', zippy);
 
 /* Function to POST data */
-app.post( ,(res,req) => {
+app.post( '',(res,req) => {
 
 });
 
 /* Function to GET Project Data */
-app.get( ,(res,req) => {
+app.get( '',(res,req) => {
 
 });
