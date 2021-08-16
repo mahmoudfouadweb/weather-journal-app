@@ -1,18 +1,27 @@
 /* Global Variables */
 
-// Create a new date instance dynamically with JS
-let d = new Date();
-let newDate = d.getMonth() + '.' + d.getDate() + '.' + d.getFullYear();
-// my API from OpenWeatherMap.com
-const APIkey = '566c9ff97bfc96be30227785b9abadb2';
-// set full url from OpenWeatherMap.com
+// Personal API Key for OpenWeatherMap API
+const apiKey = "566c9ff97bfc96be30227785b9abadb2";
 // get the generate button by id
 const genButton = document.getElementById('generate');
+// const urlZip = `https://api.openweathermap.org/data/2.5/weather?zip=${zipCode},&appid=${apiKey}&units=metric`;
+const server = 'http://localhost:8000';
 
-genButton.addEventListener('click', () => {
+// Create a new date instance dynamically with JS
+let d = new Date();
+let newDate = d.getMonth() + 1 + '.' + d.getDate() + '.' + d.getFullYear();
+
+/* Function called by event listener */
+const zippy = async () => {
     const zipCode = document.getElementById('zip').value;
-    const urlZip = `api.openweathermap.org/data/2.5/weather?zip=${zipCode}&appid=${APIkey}&units=imperial`;
-    let res = fetch(urlZip);
-    // test res
-    console.log(res); 
-});
+        // Function to GET Web API Data
+        const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zipCode},&appid=${apiKey}&units=metric`);
+        // convert data to json
+        const data = await res.json();
+        const temp = data.main.temp;
+        console.log(temp);
+
+}
+// Event listener to add function to existing HTML DOM element
+genButton.addEventListener('click', zippy);
+
