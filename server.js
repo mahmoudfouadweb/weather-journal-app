@@ -27,15 +27,15 @@ app.use(cors());
 // Initialize the main project folder
 app.use(express.static('website'));
 // Post Route
-app.post('/save', (req, res) => {
+app.post('/weather', (req, res) => {
      req.body = projectData;
      req.body.temp = projectData.temp;
      req.body.date = projectData.date;
-     req.body.name = projectData.name;
+     req.body.feelings = projectData.feelings;
      res.end()
 });
 // Callback function to complete GET '/all'
-app.get('/weather', (req, res) => {
+app.get('/data', (req, res) => {
     res.send(projectData)
 });
 console.log(projectData);
