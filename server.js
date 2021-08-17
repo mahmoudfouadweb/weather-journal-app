@@ -32,7 +32,7 @@ app.post('/weather', (req, res) => {
      req.body.temp = projectData.temp;
      req.body.date = projectData.date;
      req.body.feelings = projectData.feelings;
-     res.end()
+     res.send()
 });
 // Callback function to complete GET '/all'
 app.get('/data', (req, res) => {
