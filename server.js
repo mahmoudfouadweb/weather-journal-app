@@ -28,10 +28,11 @@ app.use(cors());
 app.use(express.static('website'));
 // Post Route
 app.post('/weather', (req, res) => {
-     req.body = projectData;
-     req.body.temp = projectData.temp;
-     req.body.date = projectData.date;
-     req.body.feelings = projectData.feelings;
+    //  req.body = projectData;
+    //  req.body.temp = projectData.temp;
+    //  req.body.date = projectData.date;
+    //  req.body.content = projectData.content;
+    projectData = { ...req.body }
      res.send()
 });
 // Callback function to complete GET '/all'
