@@ -62,7 +62,7 @@ const zippy = async () => {
                     tempId.innerHTML = `temp : ${data.temp}`;
                     contentId.innerHTML = `feeling : ${data.content}`;
                 })
-        } catch (error) { console.log(error); }
+        } catch (error) { console.log('error'error); }
     }
     // call the function
     updateUI();
