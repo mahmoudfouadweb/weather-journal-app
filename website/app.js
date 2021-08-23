@@ -63,9 +63,9 @@ const zippy = async () => {
         contentId.innerHTML = `feeling : ${data.content}`;
       });
     } catch (error) {
-      console.log(error);
-    }
-  }
+      console.log(error)
+    };
+  };
   // call the function
   updateUI();
 };
